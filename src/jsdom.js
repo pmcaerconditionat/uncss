@@ -16,7 +16,7 @@ function fromSource(src, options) {
             FetchExternalResources: ['script'],
             ProcessExternalResources: ['script']
         },
-        virtualConsole: jsdom.createVirtualConsole().sendTo(console),
+        virtualConsole: jsdom.createVirtualConsole().sendTo(console, { omitJSDOMErrors: true }),
         userAgent: options.userAgent
     };
 
